@@ -10,7 +10,7 @@ services:
 
 before_install:
   - docker build -t test_snakes .
-  - docker run --rm -p8080:80 test_snakes
+  - docker run -d --rm -p8080:80 test_snakes
   - pip install -r tests/requirements.txt
 
 script:
